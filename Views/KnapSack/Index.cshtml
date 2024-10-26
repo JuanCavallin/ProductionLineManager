@@ -1,0 +1,34 @@
+﻿
+<h1>Maximum Profit Generated: @ViewBag.MaxProfit</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Profit
+            </th>
+            <th>
+                Time_Cost
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (Product item in ViewBag.Products) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Profit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time_Cost)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
